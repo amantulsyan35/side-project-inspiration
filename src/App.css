@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+.Project-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 2em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 4em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #212529;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbar h3 {
+  font-weight: 700;
+  color: #212529;
+}
+
+.Navbar-main {
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #adb5bd;
+  opacity: 0.7;
+  color: #212529;
+  margin: auto;
+  height: 7em;
+}
+
+.fetch {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 4em;
+}
+.fetch button {
+  outline: none;
+  padding: 1em;
+  width: 15%;
+  outline: none;
+  border: none;
+  color: #f8f9fa;
+  background-color: #343a40;
 }
 
-.App-link {
-  color: #61dafb;
+.Form {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
+.Form-select {
+  outline: none;
+  border: none;
+  padding: 0.5em;
+  margin-left: 1em;
+}
+
+.Form label {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0.3em;
+}
+
+.Navbar-upvote {
+  width: 50%;
+  height: 7em;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  opacity: 0.7;
+  color: #212529;
+  margin: auto;
+  margin-bottom: 4em;
+  text-align: center;
+}
+.Navbar-upvote p {
+  margin-right: 1em;
+}
+
+.Navbar-upvote a {
+  text-decoration: none;
+  color: #212529;
+  margin-right: 0.5em;
+}
+.Navbar-comment {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 0.7em;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #adb5bd;
+  color: #212529;
+  height: 12em;
+  letter-spacing: 0.3em;
+}
+
+.loader {
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 16px solid #bdc3c7;
+  width: 120px;
+  height: 120px;
+  border-top-color: #1abc9c;
+  border-bottom-color: #3498db;
+  border-radius: 50%;
+  animation: coloredspin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes coloredspin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: #1abc9c;
+    border-bottom-color: #1abc9c;
+  }
+  25% {
+    border-top-color: #2ecc71;
+    border-bottom-color: #2ecc71;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.05);
+    border-top-color: #3498db;
+    border-bottom-color: #3498db;
+  }
+  75% {
+    border-top-color: #9b59b6;
+    border-bottom-color: #9b59b6;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    border-top-color: #1abc9c;
+    border-bottom-color: #1abc9c;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
