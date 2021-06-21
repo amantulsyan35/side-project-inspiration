@@ -18,3 +18,7 @@
 npm install
 
 npm start
+
+## Caution 
+
+Not responsive to mobile view, much more suited to desktop view
