@@ -46,3 +46,11 @@
   color: #f8f9fa;
   margin-left: 1em;
 }
+
+/* Responsive css */
+
+@media (max-width: 576px) {
+  .Card-animated span {
+    margin-left: 1em;
+  }
+}

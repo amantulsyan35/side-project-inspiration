@@ -66,7 +66,7 @@ const App = (props) => {
   });
 
   if (loading) {
-    return <div class='loader'></div>;
+    return <div className='loader'></div>;
   }
 
   return (
@@ -80,20 +80,15 @@ const App = (props) => {
       </div>
       <div className='fetch'>
         <form className='Form'>
-          <label>
-            Select the number of projects:
-            <select
-              value={count}
-              onChange={handleChange}
-              className='Form-select'
-            >
-              <option value='5'>5</option>
-              <option value='10'>10</option>
-              <option value='15'>15</option>
-              <option value='20'>20</option>
-              <option value='25'>25</option>
-            </select>
-          </label>
+          <label>Select the number of projects:</label>
+
+          <select value={count} onChange={handleChange} className='Form-select'>
+            <option value='5'>5</option>
+            <option value='10'>10</option>
+            <option value='15'>15</option>
+            <option value='20'>20</option>
+            <option value='25'>25</option>
+          </select>
         </form>
         <button onClick={handleClick}>Get Ideas</button>
       </div>
